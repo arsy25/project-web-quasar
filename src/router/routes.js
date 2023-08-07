@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: "/",
+    path: "/pembeli",
     component: () => import("layouts/MainLayout1.vue"),
     children: [
       {
@@ -21,7 +21,7 @@ const routes = [
     ],
   },
   {
-    path: "/",
+    path: "/su",
     component: () => import("layouts/MainLayoutSuperA.vue"),
     children: [
       {
@@ -42,7 +42,7 @@ const routes = [
     ],
   },
   {
-    path: "/",
+    path: "/admin",
     component: () => import("layouts/MainLayoutAdmin.vue"),
     children: [
       {
