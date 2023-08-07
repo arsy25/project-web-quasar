@@ -25,13 +25,13 @@ const routes = [
     component: () => import("layouts/MainLayoutSuperA.vue"),
     children: [
       {
-        path: "RegistAdmin",
-        name: "RegistAdmin",
+        path: "dashboardSuperAdmin",
+        name: "dashboardSuperAdmin",
         component: () => import("pages/SuperAdmin.vue"),
       },
       {
-        path: "SuperAdmin",
-        name: "SuperA",
+        path: "RegistAdmin",
+        name: "RegistAdmin",
         component: () => import("pages/registAdmin.vue"),
       },
       {
@@ -40,7 +40,29 @@ const routes = [
         component: () => import("pages/DaftarAdmin.vue"),
       }
     ],
+  },
+  {
+    path: "/",
+    component: () => import("layouts/MainLayoutAdmin.vue"),
+    children: [
+      {
+        path: "dashboardAdmin",
+        name: "dashboardAdmin",
+        component: () => import("pages/AdminPage.vue"),
+      },
+      {
+        path: "RegistSeller",
+        name: "RegistSeller",
+        component: () => import("pages/RegistSeller.vue"),
+      },
+      {
+        path: "DaftarSeller",
+        name: "DaftarSeller",
+        component: () => import("pages/DaftarSeller.vue"),
+      }
+    ],
   }
+
   // },
   // {
   //   path: '/LoginFormEmail',

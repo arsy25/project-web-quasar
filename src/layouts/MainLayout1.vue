@@ -39,11 +39,11 @@
 
             <q-drawer v-model="leftDrawerOpen" show-if-above class="bg-secondary">
       <q-card
-        class="my-card q-ma-sm bg-accent"
+        class="my-card q-ma-sm bg-image"
       >
         <q-item>
           <q-item-section>
-            <img src="images/icons/batman.svg" style="width: 40px" />
+            <img src="images/icon/female.png" style="width: 40px" />
           </q-item-section>
         </q-item>
       </q-card>          
@@ -138,15 +138,6 @@
               </q-item-section>
               <q-item-section> Export Data </q-item-section>
             </q-item>
-            <q-item
-              active-class="tab-active"
-              class="navigation-item text-white-6"
-              exact
-              :to="{ name: 'import' }"
-              clickable
-              v-ripple
-            >
-            </q-item>
 
  </q-expansion-item>
 </q-list>
@@ -170,3 +161,10 @@ export default {
   }
 }
   </script>
+  <style>
+  .bg-image {
+    background-image: url(https://cdn.spacetelescope.org/archives/images/screen/opo1531b.jpg);
+    background-size: 100%;
+
+  }
+</style>

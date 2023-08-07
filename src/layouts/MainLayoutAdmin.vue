@@ -17,7 +17,7 @@
             flat
             size="xl"
             icon="account_circle"
-            label="SUPERADMIN"
+            label="ADMIN 01"
           >
             <div class="row q-pa-md bg-accent">
               <div class="column">
@@ -43,10 +43,10 @@
       >
         <q-item class="row">
           <q-item-section class="col-2">
-            <img src="icons/avt.png" style="width: 40px" />
+            <img src="public/icons/female.png" style="width: 41px" />
           </q-item-section>
           <q-item-section class="col">
-            <q-badge>SuperAdmin</q-badge>
+            <q-badge>Admin 01</q-badge>
           </q-item-section>
         </q-item>
       </q-card>          
@@ -59,13 +59,13 @@
             exact
             class="navigation-item text-white-6"
             clickable
-            :to="{ name: 'dashboardSuperAdmin' }"
+            :to="{ name: 'dashboardAdmin' }"
             v-ripple
           >
             <q-item-section avatar>
               <q-icon name="space_dashboard" />
             </q-item-section>
-            <q-item-section> REGISTRASI ADMIN </q-item-section>
+            <q-item-section> REGISTRASI SELLER </q-item-section>
           </q-item>
 
           <q-separator />
@@ -76,20 +76,20 @@
               class="navigation-item text-white-6"
               exact
               clickable
-              :to="{ name: 'RegistAdmin' }"
+              :to="{ name: 'RegistSeller' }"
               v-ripple
             >
               <q-item-section avatar>
-                <q-icon name="add_shopping_cart" />
+                <q-icon name="people" />
               </q-item-section>
-              <q-item-section>Pendaftaran Admin</q-item-section>
+              <q-item-section>Pendaftaran Seller</q-item-section>
             </q-item>
           
             <q-item
             active-class="tab-active"
             class="navigation-item text-white-6"
             exact
-            :to="{ name: 'DaftarAdmin' }"
+            :to="{ name: 'DaftarSeller' }"
             clickable
             v-ripple
           >
@@ -97,7 +97,7 @@
               <q-icon name="assessment" />
             </q-item-section>
             <q-item-section>
-              Daftar Admin
+              Daftar Seller
             </q-item-section>
           </q-item>
 
