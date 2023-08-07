@@ -12,7 +12,7 @@
         />
         <q-space />
 
-        <div class="row q-gutter-md">
+        <div class="row q-gutter-md" v-if="$q.platform.is.desktop">
           <q-btn-dropdown
             flat
             size="xl"
@@ -34,6 +34,35 @@
               </div>
             </q-btn-dropdown>
             </div>
+            <!-- Mobile ONLY ( DONOT Touch :3 ) -->
+            <div class="row q-gutter-md" v-if="$q.platform.is.mobile">
+      <q-btn-dropdown
+        flat
+        size="xl"
+        icon="account_circle"
+        label="Administrator"
+        class="flex-center"
+      >
+        <div class="row q-pa-xs bg-accent text-center flex-center">
+          <div class="column">
+            <div class="text-h6 text-white -mb-sm">SETTINGS</div>
+  <q-separator />
+  <div class="q-pt-md">
+            <q-btn
+              color="primary"
+
+              label="Profile"
+              :to="{ name: 'profile' }"
+              size="md"
+              v-close-popup
+            />
+</div>
+
+
+          </div>
+        </div>
+      </q-btn-dropdown>
+    </div>
             </q-toolbar>
             </q-header>
 
@@ -46,11 +75,11 @@
             <img src="images/icon/female.png" style="width: 40px" />
           </q-item-section>
         </q-item>
-      </q-card>          
+      </q-card>
 
       <q-card class="my-card q-mx-sm q-mt-md bg-accent text-white" style="height: auto">
         <q-list>
-          
+
           <q-item
             active-class="tab-active"
             exact
@@ -86,7 +115,7 @@
               </q-item-section>
               <q-item-section> Pembelian Barang </q-item-section>
             </q-item>
-            
+
             <q-item
             active-class="tab-active"
             class="navigation-item text-white-6"
@@ -124,7 +153,7 @@
             class="navigation-item text-white-6"
             icon="zoom_out"
             label="Master Data"
-            >   
+            >
             <q-item
               active-class="tab-active"
               class="navigation-item text-white-6"
@@ -143,7 +172,7 @@
 </q-list>
 </q-card>
 </q-drawer>
-    
+
 <q-page-container>
  <router-view />
     </q-page-container>

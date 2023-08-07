@@ -2,8 +2,10 @@
     <q-page class="q-pa-md">
         <q-card class="q-pa-md q-mb-md">
             <q-item-label class="text-weight-bold" style="font-size: large;">HALAMAN PEMBELIAN</q-item-label>
+
             <q-item-caption class="text">Halaman ini difungsikan untuk melakukan pembelian</q-item-caption>
-        </q-card>
+
+          </q-card>
         <q-card class="q-pa-md">
             <div class="text-weight-bold">
               <q-item-label class="text-weight-bold">FORM PEMBELIAN</q-item-label>
@@ -12,104 +14,111 @@
                 @submit="onSubmit"
                 >
             <div class="q-mt-md items-start row q-col-gutter-md">
-                
-                <q-input 
-                    class="col-4" 
-                    color="teal" 
-                    filled 
+             <div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                    class="col-4"
+                    color="teal"
+                    filled
                     outlined
-                    v-model="form.JUDUL" 
+                    v-model="form.JUDUL"
                     label="Produk">
                     <template v-slot:prepend>
                         <q-icon name="category" />
                     </template>
                 </q-input>
-
-                <q-input 
-                    class="col-4" 
-                    color="teal" 
-                    filled 
+      </div>
+                <div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                    class="col-4"
+                    color="teal"
+                    filled
                     outlined
-                    v-model="form.BERAT_PRODUK" 
+                    v-model="form.BERAT_PRODUK"
                     label="Berat Produk">
                     <q-chip label="Gram" />
                     <template v-slot:prepend>
                     <q-icon name="scale" />
                     </template>
                 </q-input>
-
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+               </div>
+               <div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.JENIS_GARANSI" 
+                v-model="form.JENIS_GARANSI"
                 label="Jenis Garansi">
                     <template v-slot:prepend>
                     <q-icon name="savings" />
                     </template>
                 </q-input>
-
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+                </div>
+<div class="q-col-xs-12 q-col-md-4">
+<q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.HARGA" 
+                v-model="form.HARGA"
                 label="Harga">
                     <template v-slot:prepend>
                     <q-icon name="paid" />
                     </template>
                 </q-input>
-
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+</div>
+<div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.STOCK" 
+                v-model="form.STOCK"
                 label="Stok">
                     <template v-slot:prepend>
                     <q-icon name="inventory_2" />
                     </template>
                 </q-input>
-                
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+</div>
+<div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.MERK" 
+                v-model="form.MERK"
                 label="Merk">
                     <template v-slot:prepend>
                     <q-icon name="storefront" />
                     </template>
                 </q-input>
-
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+</div>
+<div class="q-col-xs-12 q-col-md-4">
+                <q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.DIMENSI" 
+                v-model="form.DIMENSI"
                 label="Dimensi">
                     <template v-slot:prepend>
                     <q-icon name="grid_4x4" />
                     </template>
                 </q-input>
-
-                <q-input 
-                class="col-4" 
-                color="teal" 
-                filled 
+</div>
+<div class="q-col-xs-12 q-col-md-4">
+<q-input
+                class="col-4"
+                color="teal"
+                filled
                 outlined
-                v-model="form.DIKIRIM_DARI" 
+                v-model="form.DIKIRIM_DARI"
                 label="Dikirim dari">
                     <template v-slot:prepend>
                     <q-icon name="outlined_flag" />
                     </template>
                 </q-input>
-
+</div>
             </div>
             <div class="q-mt-md">
                 <q-input
@@ -126,13 +135,16 @@
             </q-form>
 
         </q-card>
-       
+
 
     </q-page>
 
 </template>
 
 <script>
+import { useQuasar } from 'quasar';
+const $q = useQuasar();
+
 const model = () => {
   return {
     JUDUL: null,
@@ -153,6 +165,7 @@ export default {
   data () {
     return {
       form: model()
+
     }
   },
   methods: {
@@ -178,3 +191,13 @@ export default {
   }
 }
 </script>
+
+
+<style scoped>
+@media(max-width: 600px) {
+  .q-input input::placeholder {
+    font-size: 14px;
+    transform: scale(1.2);
+  }
+}
+</style>
