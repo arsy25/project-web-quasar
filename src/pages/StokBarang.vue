@@ -27,7 +27,7 @@
           {{ props.row.STOCK }}</q-td>
         <q-td key="merk" :props="props">
           {{ props.row.MERK }}</q-td>
-        <q-td key="action" :props="props">
+        <q-td key="action" :props="props" class="q-gutter-md">
         <q-btn @click="this.editdata(props.row)">edit</q-btn>
         <q-btn @click="this.deletedata(props.row)">delete</q-btn>
       </q-td>
@@ -163,6 +163,7 @@
                 </q-input>
 
             </div>
+
             <div class="q-mt-md">
                 <q-input
                 v-model="form.DESKRIPSI_BARANG"

@@ -18,7 +18,7 @@
                         color="teal" 
                         filled 
                         outlined
-                        v-model="namaadmin" 
+                        v-model="form.NAMA" 
                         label="Nama Admin">
                         <template v-slot:prepend>
                             <q-icon name="category" />
@@ -30,7 +30,7 @@
                         color="teal" 
                         filled 
                         outlined
-                        v-model="notelp" 
+                        v-model="form.NOMOR_TELEPON" 
                         label="No Telepon">
                         <template v-slot:prepend>
                         <q-icon name="scale" />
@@ -42,7 +42,7 @@
                     color="teal" 
                     filled 
                     outlined
-                    v-model="alamat" 
+                    v-model="form.ALAMAT" 
                     label="Alamat">
                         <template v-slot:prepend>
                         <q-icon name="savings" />
@@ -54,7 +54,7 @@
                     color="teal" 
                     filled 
                     outlined
-                    v-model="password" 
+                    v-model="form.PASSWORD" 
                     label="password">
                         <template v-slot:prepend>
                         <q-icon name="paid" />
@@ -70,4 +70,43 @@
     </template>
     
     <script>
-    </script>
+    const model = () => {
+  return {
+    NAMA: null,
+    PASSWORD: null,
+    NOMOR_TELEPON: null,
+    ALAMAT: null,
+  }
+}
+export default {
+  name: "IndexPage",
+
+  data () {
+    return {
+      form: model()
+    }
+  },
+  methods: {
+    onSubmit() {
+      this.onCreate();
+    },
+    async onCreate() {
+        // console.log(this.form)
+      await this.$axios
+      .post(
+        "admin/create",
+        this.form
+      )
+      .finally()
+      .then((response) => {
+        if (!this.$parseResponse(response.data)) {
+          this.$successNotif(response.data.message, "positive");
+          this.$router.push({ name: "DaftarAdmin"})
+        }
+      })
+
+    },
+
+  }
+}
+</script>
