@@ -11,6 +11,7 @@
                   <div class="text-weight-bold text-h6">FORM PENDAFTARAN SELLER</div>
                   <div class="text-italic">Admin can register 'Sellers' Account here.</div>
                 </div>
+
                 <q-form
                     @submit="onSubmit"
                     >
