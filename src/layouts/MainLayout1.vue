@@ -38,29 +38,35 @@
             <div class="row q-gutter-md" v-if="$q.platform.is.mobile">
       <q-btn-dropdown
         flat
-        size="xl"
+        size="lg"
         icon="account_circle"
         label="Administrator"
         class="flex-center"
       >
-        <div class="row q-pa-xs bg-accent text-center flex-center">
-          <div class="column">
-            <div class="text-h6 text-white -mb-sm">SETTINGS</div>
-  <q-separator />
-  <div class="q-pt-md">
-            <q-btn
-              color="primary"
-
-              label="Profile"
-              :to="{ name: 'profile' }"
-              size="md"
-              v-close-popup
-            />
-</div>
-
-
-          </div>
+      <div class="row no-wrap q-pa-md bg-secondary text-white">
+        <div class="column">
+          <div class="text-h6 q-mb-md text-center">Settings</div>
+   <q-btn label="profile" size="15px"/>
         </div>
+
+        <q-separator vertical inset class="q-mx-lg" color="white"/>
+
+        <div class="column items-center q-pl-lg">
+          <q-avatar size="72px">
+            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+          </q-avatar>
+
+          <div class="text-subtitle1 q-mt-md q-mb-xs">Admin</div>
+
+          <q-btn
+            color="primary"
+            label="Logout"
+            push
+            size="sm"
+            v-close-popup
+          />
+        </div>
+      </div>
       </q-btn-dropdown>
     </div>
             </q-toolbar>
