@@ -10,6 +10,7 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
+
         <q-space />
 
         <!-- DESKTOP -->
