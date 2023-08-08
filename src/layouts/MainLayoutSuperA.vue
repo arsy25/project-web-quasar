@@ -12,10 +12,34 @@
         />
         <q-space />
 
-        <div class="row q-gutter-md">
+        <!-- DESKTOP -->
+        <div class="row q-gutter-md" v-if="$q.platform.is.desktop">
           <q-btn-dropdown
             flat
             size="xl"
+            icon="account_circle"
+            label="SUPERADMIN"
+          >
+            <div class="row q-pa-md bg-accent">
+              <div class="column">
+                <div class="text-h6 text-white -mb-sm">SETTINGS</div>
+                <q-btn
+                  color="primary"
+                  outline
+                  label="Profile"
+                  :to="{ name: 'profile' }"
+                  size="md"
+                  v-close-popup
+                />
+          </div>
+              </div>
+            </q-btn-dropdown>
+            </div>
+            <!-- MOBILE -->
+            <div class="row q-gutter-md" v-if="$q.platform.is.mobile">
+          <q-btn-dropdown
+            flat
+            size="lg"
             icon="account_circle"
             label="SUPERADMIN"
           >
@@ -49,11 +73,11 @@
             <q-badge>SuperAdmin</q-badge>
           </q-item-section>
         </q-item>
-      </q-card>          
+      </q-card>
 
       <q-card class="my-card q-mx-sm q-mt-md bg-accent text-white" style="height: auto">
         <q-list>
-          
+
           <q-item
             active-class="tab-active"
             exact
@@ -84,7 +108,7 @@
               </q-item-section>
               <q-item-section>Pendaftaran Admin</q-item-section>
             </q-item>
-          
+
             <q-item
             active-class="tab-active"
             class="navigation-item text-white-6"
@@ -121,7 +145,7 @@
             class="navigation-item text-white-6"
             icon="zoom_out"
             label="Master Data"
-            >   
+            >
             <q-item
               active-class="tab-active"
               class="navigation-item text-white-6"
@@ -140,7 +164,7 @@
 </q-list>
 </q-card>
 </q-drawer>
-    
+
 <q-page-container>
  <router-view />
     </q-page-container>

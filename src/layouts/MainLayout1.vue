@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         <q-space />
-
+<!-- DESKTOP -->
         <div class="row q-gutter-md" v-if="$q.platform.is.desktop">
           <q-btn-dropdown
             flat

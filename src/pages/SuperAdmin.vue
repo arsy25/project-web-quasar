@@ -4,7 +4,7 @@
             <div class="text-weight-bold text-h4" >HALAMAN SUPERADMIN</div>
         </q-card>
         <q-card class="q-pa-md q-mb-md" v-i="$q.platform.is.mobile">
-            <div class="text-weight-bold text-h6" >HALAMAN SUPERADMIN</div>
+            <div class="text-weight-bold text-center text-h5" >HALAMAN SUPERADMIN</div>
         </q-card>
         <q-card class="q-pa-md">
             <div class="text-weight-bold">
@@ -58,6 +58,7 @@
         </q-card>
         </div>
         </div>
+        <!-- MOBILE -->
         <div class="row q-mt-xs q-gutter-sm" v-if="$q.platform.is.mobile">
         <div class="col-12 q-mt-md">
           <q-card class="q-pa-md">
