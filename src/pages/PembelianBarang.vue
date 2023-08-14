@@ -3,12 +3,11 @@
         <q-card class="q-pa-md q-mb-md">
             <q-item-label class="text-weight-bold" style="font-size: large;">HALAMAN PEMBELIAN</q-item-label>
 
-            <q-item-caption class="text">Halaman ini difungsikan untuk melakukan pembelian</q-item-caption>
+            <q-item-caption class="text">Halaman ini berfungsi untuk melakukan pembelian</q-item-caption>
 
           </q-card>
         <q-card class="q-pa-md">
-          <q-toolbar class="q-pa-md bg-primary">
-            <div class="text-weight-bold text-h5">
+            <div class="text-weight-bold">
               <q-item-label class="text-weight-bold">FORM PEMBELIAN</q-item-label>
             </div></q-toolbar>
             <q-form

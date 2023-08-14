@@ -109,7 +109,7 @@
 
       <div class="row q-gutter-md q-mt-md">
         <div class="col">
-          <q-card class="q-pa-md bg-secondary">
+          <q-card class="q-pa-md bg-secondary q-mb-md">
             <q-carousel class="q-pa-md" animated v-model="slide" infinite>
               <q-carousel-slide name="opening-jjks2">
         <q-video
@@ -134,7 +134,7 @@
       </q-carousel-slide>
     </q-carousel>
 
-            <div class="row justify-center q-mt-md">
+            <div class="row justify-center q-pt-md">
               <q-btn-toggle
                 v-model="slide"
                 :options="[

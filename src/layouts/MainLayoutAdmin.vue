@@ -46,14 +46,14 @@
             <img src="public/icons/female.png" style="width: 41px" />
           </q-item-section>
           <q-item-section class="col">
-            <q-badge>Admin 01</q-badge>
+            <q-badge class="text-bold">Admin 01</q-badge>
           </q-item-section>
         </q-item>
-      </q-card>          
+      </q-card>
 
       <q-card class="my-card q-mx-sm q-mt-md bg-accent text-white" style="height: auto">
         <q-list>
-          
+
           <q-item
             active-class="tab-active"
             exact
@@ -84,7 +84,7 @@
               </q-item-section>
               <q-item-section>Pendaftaran Seller</q-item-section>
             </q-item>
-          
+
             <q-item
             active-class="tab-active"
             class="navigation-item text-white-6"
@@ -121,7 +121,7 @@
             class="navigation-item text-white-6"
             icon="zoom_out"
             label="Master Data"
-            >   
+            >
             <q-item
               active-class="tab-active"
               class="navigation-item text-white-6"
@@ -140,7 +140,7 @@
 </q-list>
 </q-card>
 </q-drawer>
-    
+
 <q-page-container>
  <router-view />
     </q-page-container>
