@@ -224,7 +224,7 @@
         <div class="col q-gutter-sm q-mt-sm">
         <div>
           <div class="col">
-          <q-card class="q-pa-md bg-accent"><DonutChart></DonutChart></q-card>
+          <q-card class="q-pa-md bg-accent"><LineChart></LineChart></q-card>
           </div>
         </div>
       </div>
@@ -285,7 +285,7 @@
 
 
 import BarChart from '../components/apexchart/BarChart.vue'
-import DonutChart from '../components/apexchart/DonutChart.vue'
+import LineChart from '../components/apexchart/LineChart.vue'
 import { ref } from 'vue'
 export default ({
   setup () {
@@ -296,7 +296,7 @@ export default ({
   name: 'IndexPage',
   components: {
     BarChart,
-    DonutChart
+    LineChart
   },
   // eslint-disable-next-line space-before-function-paren
   data() {

@@ -7,9 +7,10 @@
 
           </q-card>
         <q-card class="q-pa-md">
-            <div class="text-weight-bold">
+          <q-toolbar class="q-pa-md bg-primary">
+            <div class="text-weight-bold text-h5">
               <q-item-label class="text-weight-bold">FORM PEMBELIAN</q-item-label>
-            </div>
+            </div></q-toolbar>
             <q-form
                 @submit="onSubmit"
                 >

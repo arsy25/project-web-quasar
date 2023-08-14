@@ -13,8 +13,8 @@
             </div>
         </q-card>
         <div class="row q-mt-xs q-gutter-sm" v-if="$q.platform.is.desktop">
-        <div class="col-3 q-mt-md ">
-        <q-card class="col-3 q-pa-md">
+        <div class="col-3 q-mt-md">
+        <q-card class="col-3 q-pa-md flex flex-center">
             <q-badge class="q-pa-md">
         <q-item class="row">
             <q-item-section class="col-3" avatar>
@@ -35,8 +35,8 @@
 
         </q-card>
         </div>
-        <div class="col-3 q-mt-md ">
-        <q-card class="col-3 q-pa-md">
+        <div class="col-3 q-mt-md">
+        <q-card class="col-3 q-pa-md flex flex-center">
             <q-badge class="q-pa-md">
         <q-item class="row">
             <q-item-section class="col-3" avatar>
@@ -56,8 +56,13 @@
              </q-badge>
 
         </q-card>
+        
         </div>
+      <q-card class="q-pa-md q-mt-md">
+        <LineChart></LineChart>
+      </q-card>
         </div>
+
         <div class="row q-mt-xs q-gutter-sm" v-if="$q.platform.is.mobile">
         <div class="col-12 q-mt-md">
           <q-card class="q-pa-md">
@@ -97,11 +102,26 @@
             </q-badge>
           </q-card>
         </div>
+        <q-card class="q-pa-md q-mt-md">
+        <LineChart></LineChart>
+      </q-card>
       </div>
 
 </q-page>
 </template>
 
 <script>
+import LineChart from '../components/apexchart/LineChart.vue'
+export default ({
+  setup () {
+    return{
+
+    }
+  },
+  name: 'IndexPage',
+  components: {
+    LineChart
+  },
+})
 
 </script>

@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: "/pembeli",
+    path: "/",
     component: () => import("layouts/MainLayout1.vue"),
     children: [
       {

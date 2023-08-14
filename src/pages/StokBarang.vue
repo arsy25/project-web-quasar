@@ -1,7 +1,7 @@
 <template>
     <q-page class="q-pa-md bg-primary">
         <q-card class="q-pa-md q-mb-md ">
-            <q-item-label class="text-weight-bold">HALAMAN DATABASE</q-item-label>
+            <q-item-label class="text-h4 my-font">HALAMAN DATABASE</q-item-label>
         </q-card>
 
         <q-card class="q-pa-md">
@@ -313,3 +313,6 @@ export default {
   }
 }
 </script>
+
+<style>
+  </style>
